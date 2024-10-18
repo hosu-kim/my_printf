@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:16:39 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/16 17:19:41 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/18 21:23:17 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ typedef struct s_info
 	int is_blank;
 }	t_info;
 
-int 
-
+#endif

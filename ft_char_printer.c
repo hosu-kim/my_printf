@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_char_printer.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 16:46:27 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/18 21:26:36 by hoskim           ###   ########.fr       */
+/*   Created: 2024/10/18 21:37:06 by hoskim            #+#    #+#             */
+/*   Updated: 2024/10/18 21:38:45 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	char_printer(int c)
 {
-	int	length;
-	int	index;
-	va_list;
+	int	len;
 
-	
+	len = ft_putchar_fd(c, 1);
+	return (len);
 }
+	
