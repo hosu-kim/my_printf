@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_nbr_printer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 17:23:21 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/16 19:14:49 by hoskim           ###   ########.fr       */
+/*   Created: 2024/10/19 19:08:31 by hoskim            #+#    #+#             */
+/*   Updated: 2024/10/19 19:09:50 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_putchar(char c)
+int ft_nbr_printer (int n)
 {
-	wrtie(1, &c, 1);
-	g_flag.char_count++;
+	ft_putnbr(n,1 );
+	return (1);
 }
