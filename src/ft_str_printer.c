@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsigned_printer.c                              :+:      :+:    :+:   */
+/*   ft_str_printer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 21:48:56 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/19 21:55:46 by hoskim           ###   ########.fr       */
+/*   Created: 2024/10/19 12:52:19 by hoskim            #+#    #+#             */
+/*   Updated: 2024/10/20 20:25:21 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_unsinged_printer (unsigned int n)
+// !str, str == 0, str == NULL
+int	ft_str_printer (char *str)
 {
-	if (10 <= n)
-		ft_unsinged_printer(n / 10);
-	return (ft_putchar_fd(n, 1));
+	int output_len;
+
+	output_len = 0;
+	if (!str)
+	{
+		output_len = ft_putstr_fd("(null)", 1);
+		return (output_len);
+	}
+	output_len += ft_putstr_fd(str, 1);
+	return (output_len);
 }
+
+// int	main()
+// {
+// 	char	*string = "This is a string";
+//
+// 	ft_str_printer(string);
+// 	return (0);
+// }
+// // cc ft_str_printer.c ../mylib/ft_putstr_fd.c

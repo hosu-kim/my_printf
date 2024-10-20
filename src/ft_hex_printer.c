@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_printer.c                                  :+:      :+:    :+:   */
+/*   ft_hex_printer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 21:37:06 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/19 13:08:03 by hoskim           ###   ########.fr       */
+/*   Created: 2024/10/20 13:53:28 by hoskim            #+#    #+#             */
+/*   Updated: 2024/10/20 19:43:51 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	char_printer(int c)
+int	ft_hex_printer (unsigned long long hex)
 {
-	ft_putchar_fd(c, 1);
-	return (1);
-}
+	int	len;
 	
+	len = 0;
+	if (16 <= hex)
+		ft_hex_printer(hex / 16);
+	len += ft_putchar_fd("0123456789ABCDEF"[hex % 16], 1);
+	return (len);
+}
