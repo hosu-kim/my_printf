@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 21:37:06 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/20 20:02:51 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/21 21:36:33 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ int	ft_char_printer(int c)
 // }
 //
 // // cc ft_char_printer.c ../my_lib/ft_putchar_fd.c
-	

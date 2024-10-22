@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsigned_printer.c                              :+:      :+:    :+:   */
+/*   ft_percent_printer.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 21:48:56 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/21 21:40:09 by hoskim           ###   ########.fr       */
+/*   Created: 2024/10/21 20:52:48 by hoskim            #+#    #+#             */
+/*   Updated: 2024/10/21 21:26:03 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_unsigned_printer(unsigned long long n)
+int	ft_percent_printer(int percent)
 {
-	int	output_len;
-
-	output_len = 0;
-	if (10 <= n)
-		ft_unsigned_printer(n / 10);
-	output_len += ft_putchar_fd(n, 1);
-	return (output_len);
+	if (percent == '%')
+		ft_putchar_fd('%', 1);
+	return (1);
 }
 
-// int	main()
+// int	main(void)
 // {
-// 	unsigned long long number;
+// 	int	percent;
 //
-// 	number = 4289249892348;
-// 	printf("The given unsigned number is: ");
-// 	fflush(stdout);
-// 	ft_unsigned_printer(number);
+// 	percent = '%';
+// 	ft_percent_printer(percent);
 // 	printf("\n");
 // 	return (0);
 // }
+//
+// cc ft_percent_printer.c ../my_lib/ft_putchar_fd.c

@@ -6,16 +6,16 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 12:52:19 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/20 20:25:21 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:54:35 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 // !str, str == 0, str == NULL
-int	ft_str_printer (char *str)
+int	ft_str_printer(char *str)
 {
-	int output_len;
+	int	output_len;
 
 	output_len = 0;
 	if (!str)

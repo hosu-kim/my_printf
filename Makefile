@@ -1,3 +1,4 @@
+
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -12,23 +13,19 @@
 
 NAME = libftprintf.a
 
-# compling variables
+# Compiler settings
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-# var or all source files
-SOURCES = ft_printf.c \
-			ft_printf_parse.c \
-			ft_printf_parse_fmt.c \
-			ft_printf_set_spec_val.c
+
+# Source and object files
+SOURCES = src/ft_printf.c src/ft_type_identifier.c \
+			src/ft_nbr_printer.c src/ft_unsigned_printer.c \
+			src/ft_char_printer.c src/ft_str_printer.c \
+			src/ft_hex_printer.c src/ft_ptr_printer.c \
+			src/ft_percent_printer.c
 # changes the suffix of sources ".c" to ".o"
-OBJECTS = $(SRCS:.c=.o)
-
-# -c: compiles .c to .o
-# -o $@: sets the name of .o files from .c files
-# $<: first dependency(SOURCES)
-.c_to_.o: $(SOURCES)
-			$(CC) $(CFLAGS) -c -o $@ $<
-
+OBJECTS = $(SOURCES:.c=.o)
+# Build the library
 # -C: changes directory then runs
 # cp: copy A to B
 # ar: archieve, .o to .a
@@ -38,17 +35,18 @@ OBJECTS = $(SRCS:.c=.o)
 # $@: $(NAME)
 # $^: all dependencies; $>: first-
 $(NAME): $(OBJECTS)
-		make all -C my_lib
-		cp my_lib/libft.a $(NAME)
-		ar rcs $@ $^
-		
+	ar rcs $@ $(OBJECTS)
+
+# Compile the source files to object files
+src/%.o: src/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 all: $(NAME)
 
 clean:
-		rm -f $(OBJS)
+	rm -f $(OBJECTS)
 
 fclean : clean
-		rm -f $(NAME)
-		make fclean -C my_lib
+	rm -f $(NAME)
 # rebuild
 re: fclean all
