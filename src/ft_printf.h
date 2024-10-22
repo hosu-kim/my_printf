@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:16:39 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/21 22:04:08 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/22 21:01:24 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,12 @@ int	ft_printf(const char *string, ...);
 
 // Sub-functions declaration
 int	ft_type_identifier(const char c, va_list *list);
-
+int	ft_ptr_printer(unsigned long long ptr);
 int	ft_char_printer(int c);
 int	ft_nbr_printer(int n);
 int	ft_unsigned_printer(unsigned long long n);
 int	ft_hex_printer(unsigned long long hex, char c);
 int	ft_str_printer(char *str);
-int	ft_ptr_printer(unsigned long long ptr);
 int	ft_percent_printer(int percent);
 
 #endif
