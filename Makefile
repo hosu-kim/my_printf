@@ -6,12 +6,12 @@
 #    By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/06 20:27:35 by hoskim            #+#    #+#              #
-#    Updated: 2024/10/23 18:01:47 by hoskim           ###   ########.fr        #
+#    Updated: 2024/10/23 19:24:41 by hoskim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-LIBFT = my_lib/libft.a
+LIBFT = my_libc/libft.a
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
