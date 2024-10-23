@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:16:39 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/22 21:01:24 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/22 21:34:28 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 # include <stdio.h>
 # include "../my_lib/libft.h"
 
-// main ft_printf function declaration
+// main ft_printf function define
 int	ft_printf(const char *string, ...);
 
-// Sub-functions declaration
+// Sub-functions define
 int	ft_type_identifier(const char c, va_list *list);
 int	ft_ptr_printer(unsigned long long ptr);
 int	ft_char_printer(int c);

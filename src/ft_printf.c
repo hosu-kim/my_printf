@@ -6,14 +6,22 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:46:27 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/21 22:07:46 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/22 22:02:52 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
+/*
+Variadic list? (va_list)
+	A special type used to pass several arguments to a fuction.
+va_start(a, b)?
+	it starts to consider a values as variadic arguments before b
+va_arg(va_list, type)?
+	to call an argument stored in va_list args;
+va_end(a)?
+	ends processing va_list
+*/
 int	ft_printf(const char *string, ...)
-// printf returns a number of printed characters
 {
 	va_list	args;
 	int		output_len;
