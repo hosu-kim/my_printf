@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 15:11:48 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/21 21:42:50 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/23 21:52:44 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	ft_ptr_printer(unsigned long long ptr)
 	int	len;
 
 	len = 0;
-	len += ft_putstr_fd("0x", 1);
 	if (ptr == 0)
-		len += ft_putstr_fd("0", 1);
+		len += ft_putstr_fd("(nil)", 1);
 	else
 	{
+		len += ft_putstr_fd("0x", 1);
 		len += ft_hex_printer(ptr, 'x');
 	}
 	return (len);

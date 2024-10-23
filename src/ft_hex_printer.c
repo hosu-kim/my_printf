@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 13:53:28 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/21 21:42:18 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/23 21:02:37 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_hex_printer(unsigned long long hex, char c)
 	if (c == 'X')
 		hex_digits = "0123456789ABCDEF";
 	output_len = 0;
-	if (16 <= hex)
-		ft_hex_printer(hex / 16, c);
+	if (hex >= 16)
+		output_len += ft_hex_printer(hex / 16, c);
 	output_len += ft_putchar_fd(hex_digits[hex % 16], 1);
 	return (output_len);
 }

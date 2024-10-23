@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 21:22:14 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/22 20:58:36 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/23 19:40:28 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_type_identifier(const char c, va_list *list)
 	else if (c == 'd' || c == 'i')
 		return (ft_nbr_printer(va_arg(*list, int)));
 	else if (c == 'u')
-		return (ft_unsigned_printer(va_arg(*list, unsigned int)));
+		return (ft_unsigned_printer(va_arg(*list, int)));
 	else if (c == 'x' || c == 'X')
 		return (ft_hex_printer(va_arg(*list, unsigned int), c));
 	else if (c == 'p')
