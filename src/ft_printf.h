@@ -6,7 +6,7 @@
 /*   By: hoskim <hoskim@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:16:39 by hoskim            #+#    #+#             */
-/*   Updated: 2024/10/22 21:34:28 by hoskim           ###   ########.fr       */
+/*   Updated: 2024/10/23 18:00:46 by hoskim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include "../my_lib/libft.h"
+# include "../my_libc/libft.h"
 
 // main ft_printf function define
 int	ft_printf(const char *string, ...);
