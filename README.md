@@ -84,6 +84,6 @@ The following format specifiers are supported by `ft_printf`:
 - Troubleshooting:
   - Ensure `main.c` exists when testing. If missing, create one with the desired test cases.
 ## Author
-- Name: hoskim
+- Name: hosu-kim
 - Email: hoskim@student.42prague.com
    
